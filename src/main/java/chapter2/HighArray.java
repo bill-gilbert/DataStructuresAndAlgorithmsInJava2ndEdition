@@ -31,7 +31,7 @@ class HighArray {
             }
         }
 
-        return !(i == nElements);
+        return i != nElements;
     }
 
     /**

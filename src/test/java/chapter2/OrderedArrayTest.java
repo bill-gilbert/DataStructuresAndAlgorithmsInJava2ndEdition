@@ -42,6 +42,15 @@ public class OrderedArrayTest
 	}
 
 	@Test
+	public void checkSearchV2()
+	{
+		assertEquals(1, orderedArray.findV2(1));
+		assertEquals(9, orderedArray.findV2(9));
+		assertEquals(-1, orderedArray.findV2(1000));
+		assertEquals(-1, orderedArray.findV2(100));
+	}
+
+	@Test
 	public void checkDelete()
 	{
 		assertTrue(orderedArray.delete(1));
