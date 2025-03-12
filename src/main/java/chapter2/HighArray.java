@@ -140,6 +140,29 @@ class HighArray {
     }
 
     /**
+     * Программный проект 2.6 - Program project 2.6
+     * <p>
+     * Удаление дубликатов из массива
+     */
+    void noDupsV2() {
+        long[] noDuplicateArr = new long[this.nElements];
+        int noDupArrLength = 0;
+        for (int j = 0; j < this.nElements; j++) {
+            int i = 0;
+            while ((i < noDupArrLength) && (noDuplicateArr[i] != this.a[j])) {
+                ++i;
+            }
+
+            if (i >= noDupArrLength) {
+                noDuplicateArr[noDupArrLength] = this.a[j];
+                noDupArrLength++;
+            }
+        }
+        this.a = noDuplicateArr;
+        this.nElements = noDupArrLength;
+    }
+
+    /**
      * Программный проект 2.3 - Program project 2.3
      * <p>
      * Сортировка массива

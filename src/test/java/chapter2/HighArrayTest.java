@@ -94,6 +94,26 @@ public class HighArrayTest
 		assertEquals(3, tempArray.getSize());
 	}
 
+
+	@Test
+	public void checkingAbsencesOfDuplicatesV2()
+	{
+		HighArray tempArray = new HighArray(9);
+		tempArray.insert(1);
+		tempArray.insert(2);
+		tempArray.insert(3);
+		tempArray.insert(3);
+		tempArray.insert(2);
+		tempArray.insert(1);
+		tempArray.insert(1);
+		tempArray.insert(2);
+		tempArray.insert(3);
+
+		tempArray.noDupsV2();
+
+		assertEquals(3, tempArray.getSize());
+	}
+
 	@Test
 	public void sortingCheck()
 	{
