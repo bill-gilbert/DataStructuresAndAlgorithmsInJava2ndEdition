@@ -15,11 +15,11 @@ public class StackCh {
         stackArray[++top] = x;
     }
 
-    public long pop() {
+    public char pop() {
         return stackArray[top--];
     }
 
-    public long peek() {
+    public char peek() {
         return stackArray[top];
     }
 
