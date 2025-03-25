@@ -9,23 +9,17 @@ import java.io.InputStreamReader;
  */
 public class ReverseStr {
     public static void main(String[] args) throws IOException {
-        StackCh stackCh = new StackCh(10);
-
-        String input, output;
-
         while (true) {
             System.out.println("Enter A string: ");
             System.out.flush();
-            input = getString();
-            System.out.println(reverser(input));
+            System.out.println(reverser(getString()));
         }
     }
 
     public static String getString() throws IOException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
-        String s = br.readLine();
-        return s;
+        return br.readLine();
     }
 
     public static String reverser(String str) {
@@ -39,8 +33,6 @@ public class ReverseStr {
         while (!stackCh.isEmpty()) {
             reversed.append(stackCh.pop());
         }
-
         return reversed.toString();
-
     }
 }
